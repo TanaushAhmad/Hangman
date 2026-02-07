@@ -111,7 +111,7 @@ const Hangman = () => {
   const resetGame = () => { setShowsCompleted(0); setScore(0); setUsedShows([]); setCompletedShows([]); startNewShow(); };
 
   const showWelcomeModal = () => {
-    setModalContent({ title: '📺 Welcome to TV Shows Challenge!', body: (<div><p>Guess 3 famous TV shows from 2000-present to win!</p></div>), action: () => { setShowModal(false); resetGame(); } });
+    setModalContent({ title: 'Welcome to TV Shows Challenge!', body: (<div><p>Guess 3 famous TV shows from 2000-present to win!</p></div>), action: () => { setShowModal(false); resetGame(); } });
     setShowModal(true);
   };
 
@@ -153,7 +153,7 @@ const Hangman = () => {
     <div style={styles.container}>
       <div style={styles.main}>
         <div style={{ textAlign: 'center', marginBottom: '25px' }}>
-          <h1 style={{ color: '#000000', fontSize: '2em', margin: 0 }}>📺 TV Shows Challenge</h1>
+          <h1 style={{ color: '#000000', fontSize: '2em', margin: 0 }}> TV Shows Challenge</h1>
           <p style={{ color: '#666', fontSize: '0.95em', marginTop: '5px' }}>Guess 3 shows to win!</p>
         </div>
 
@@ -170,7 +170,7 @@ const Hangman = () => {
 
             <div style={{ background: '#f9f9f9', borderRadius: '15px', padding: '20px', display: 'flex', flexDirection: 'column' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
-                <div style={{ background: 'linear-gradient(135deg, #000000, #00b3ff)', color: 'white', padding: '8px 15px', borderRadius: '20px', fontSize: '0.85em', fontWeight: 'bold' }}>{currentShow.category.toUpperCase()}</div>
+                <div style={{ background: 'linear-gradient(135deg, #000000, #000000)', color: 'white', padding: '8px 15px', borderRadius: '20px', fontSize: '0.85em', fontWeight: 'bold' }}>{currentShow.category.toUpperCase()}</div>
                 <div style={{ background: '#ffb900', color: 'white', padding: '8px 15px', borderRadius: '20px', fontSize: '0.85em', fontWeight: 'bold' }}>SHOW {showsCompleted + 1}/3</div>
               </div>
 
