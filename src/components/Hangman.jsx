@@ -138,14 +138,14 @@ const Hangman = () => {
       const isRevealed = guessedLetters.includes(char);
       const isPreFilled = preFilledLetters.includes(index);
       return (
-        <div key={index} style={{ width: '45px', height: '60px', border: isRevealed ? (isPreFilled ? '3px solid #930000' : '3px solid #000000') : '3px solid #000000', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.8em', fontWeight: 'bold', background: isRevealed ? (isPreFilled ? 'linear-gradient(135deg, #930000, #ff0707)' : 'linear-gradient(135deg, #000000, #00b3ff)') : 'white', color: isRevealed ? 'white' : '#000000', transition: 'all 0.3s' }}>
+        <div key={index} style={{ width: '45px', height: '60px', border: isRevealed ? (isPreFilled ? '3px solid #930000' : '3px solid #000000') : '3px solid #000000', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.8em', fontWeight: 'bold', background: isRevealed ? (isPreFilled ? 'linear-gradient(135deg, #930000, #ff0707)' : 'linear-gradient(135deg, #000000, #000000)') : 'white', color: isRevealed ? 'white' : '#000000', transition: 'all 0.3s' }}>
           {isRevealed ? char : ''}
         </div>
       );
     });
   };
 
-  const styles = { container: { fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif", background: 'linear-gradient(135deg, #000000 0%, #00b3ff 100%)', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }, main: { background: 'white', borderRadius: '20px', boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)', maxWidth: '1100px', width: '100%', padding: '30px' } };
+  const styles = { container: { fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif", background: 'linear-gradient(135deg, #000000 0%, #17008c 100%)', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }, main: { background: 'white', borderRadius: '20px', boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)', maxWidth: '1100px', width: '100%', padding: '30px' } };
 
   if (!currentShow && !showModal) return null;
 
@@ -187,7 +187,7 @@ const Hangman = () => {
                   const isCorrect = isGuessed && currentShow.title.includes(letter);
                   const isWrong = isGuessed && !currentShow.title.includes(letter);
                   return (
-                    <button key={letter} onClick={() => guessLetter(letter)} disabled={!gameActive || isGuessed} style={{ padding: '12px 8px', border: 'none', borderRadius: '8px', fontSize: '1em', fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.3s', background: isGuessed ? '#e0e0e0' : (isCorrect ? 'linear-gradient(135deg, #930000, #ff0707)' : (isWrong ? 'linear-gradient(135deg, #d13438, #ff6b6b)' : 'linear-gradient(135deg, #002fff, #00b3ff)')), color: isGuessed ? '#999' : 'white', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>{letter}</button>
+                    <button key={letter} onClick={() => guessLetter(letter)} disabled={!gameActive || isGuessed} style={{ padding: '12px 8px', border: 'none', borderRadius: '8px', fontSize: '1em', fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.3s', background: isGuessed ? '#e0e0e0' : (isCorrect ? 'linear-gradient(135deg, #930000, #ff0707)' : (isWrong ? 'linear-gradient(135deg, #d13438, #ff6b6b)' : 'linear-gradient(135deg, #002fff, #002fff)')), color: isGuessed ? '#999' : 'white', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>{letter}</button>
                   );
                 })}
               </div>
