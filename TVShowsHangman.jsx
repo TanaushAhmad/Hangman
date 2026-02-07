@@ -538,7 +538,7 @@ const TVShowsHangman = () => {
             margin: '20px 0',
             fontSize: '1.3em',
             fontWeight: 'bold',
-            color: '#667eea'
+            color: '#002fff'
           }}>
             {currentShow.title}
           </div>
@@ -555,7 +555,7 @@ const TVShowsHangman = () => {
             </div>
             <div style={{ background: '#f5f7fa', padding: '12px', borderRadius: '8px' }}>
               <div style={{ fontSize: '0.85em', color: '#666' }}>Aired</div>
-              <div style={{ fontSize: '1.2em', fontWeight: 'bold', color: '#667eea' }}>{currentShow.year}</div>
+              <div style={{ fontSize: '1.2em', fontWeight: 'bold', color: '#002fff' }}>{currentShow.year}</div>
             </div>
             <div style={{ background: '#f5f7fa', padding: '12px', borderRadius: '8px' }}>
               <div style={{ fontSize: '0.85em', color: '#666' }}>Network</div>
@@ -563,10 +563,10 @@ const TVShowsHangman = () => {
             </div>
             <div style={{ background: '#f5f7fa', padding: '12px', borderRadius: '8px' }}>
               <div style={{ fontSize: '0.85em', color: '#666' }}>Points Earned</div>
-              <div style={{ fontSize: '1.2em', fontWeight: 'bold', color: '#667eea' }}>+{earnedPoints}</div>
+              <div style={{ fontSize: '1.2em', fontWeight: 'bold', color: '#002fff' }}>+{earnedPoints}</div>
             </div>
           </div>
-          <p style={{ marginTop: '20px', fontWeight: 'bold', color: '#667eea' }}>
+          <p style={{ marginTop: '20px', fontWeight: 'bold', color: '#002fff' }}>
             Progress: {newCompleted}/3 shows completed! 🌟
           </p>
         </div>
@@ -633,7 +633,7 @@ const TVShowsHangman = () => {
       body: (
         <div>
           <div style={{ fontSize: '3em', marginBottom: '15px' }}>🎉🏆🎉</div>
-          <p style={{ fontSize: '1.2em', fontWeight: 'bold', color: '#7fba00' }}>
+          <p style={{ fontSize: '1.2em', fontWeight: 'bold', color: '#930000' }}>
             Congratulations! You won the game!
           </p>
           <p>You successfully guessed all 3 TV shows!</p>
@@ -645,7 +645,7 @@ const TVShowsHangman = () => {
             margin: '20px 0',
             textAlign: 'left'
           }}>
-            <h3 style={{ color: '#667eea', marginBottom: '15px' }}>Your Shows:</h3>
+            <h3 style={{ color: '#002fff', marginBottom: '15px' }}>Your Shows:</h3>
             {completedShows.map((show, index) => (
               <div key={index} style={{
                 padding: '10px',
@@ -654,7 +654,7 @@ const TVShowsHangman = () => {
                 borderRadius: '8px',
                 borderLeft: '4px solid #7fba00'
               }}>
-                <div style={{ fontWeight: 'bold', color: '#667eea', fontSize: '1.1em' }}>
+                <div style={{ fontWeight: 'bold', color: '#002fff', fontSize: '1.1em' }}>
                   {index + 1}. {show.title}
                 </div>
                 <div style={{ fontSize: '0.9em', color: '#666', marginTop: '3px' }}>
@@ -672,11 +672,11 @@ const TVShowsHangman = () => {
           }}>
             <div style={{ background: '#f5f7fa', padding: '12px', borderRadius: '8px', textAlign: 'left' }}>
               <div style={{ fontSize: '0.85em', color: '#666' }}>Final Score</div>
-              <div style={{ fontSize: '1.2em', fontWeight: 'bold', color: '#667eea' }}>{finalScore}</div>
+              <div style={{ fontSize: '1.2em', fontWeight: 'bold', color: '#002fff' }}>{finalScore}</div>
             </div>
             <div style={{ background: '#f5f7fa', padding: '12px', borderRadius: '8px', textAlign: 'left' }}>
               <div style={{ fontSize: '0.85em', color: '#666' }}>Previous Best</div>
-              <div style={{ fontSize: '1.2em', fontWeight: 'bold', color: '#667eea' }}>{highScore}</div>
+              <div style={{ fontSize: '1.2em', fontWeight: 'bold', color: '#002fff' }}>{highScore}</div>
             </div>
           </div>
           
@@ -708,20 +708,20 @@ const TVShowsHangman = () => {
       title: '📺 Welcome to TV Shows Challenge!',
       body: (
         <div style={{ textAlign: 'left', margin: '20px 0' }}>
-          <h3 style={{ color: '#667eea', marginBottom: '15px' }}>🎯 Objective:</h3>
+          <h3 style={{ color: '#002fff', marginBottom: '15px' }}>- Objective:</h3>
           <p style={{ color: '#333', lineHeight: '1.8', marginBottom: '20px' }}>
             <strong>Guess 3 famous TV shows from 2000-present to win!</strong>
           </p>
           
-          <h3 style={{ color: '#667eea', marginBottom: '15px' }}>✨ Features:</h3>
+          <h3 style={{ color: '#002fff', marginBottom: '15px' }}>- Features:</h3>
           <ul style={{ lineHeight: '1.8', color: '#666' }}>
-            <li>🎁 3-4 letters pre-filled to help you start</li>
-            <li>📖 Detailed show descriptions</li>
-            <li>🏆 Win by completing 3 shows</li>
-            <li>❤️ 6 lives per show</li>
+            <li>- 3-4 letters pre-filled to help you start</li>
+            <li>- Detailed show descriptions</li>
+            <li>- Win by completing 3 shows</li>
+            <li>- 6 lives per show</li>
           </ul>
           
-          <h3 style={{ color: '#667eea', margin: '20px 0 15px 0' }}>📊 Scoring:</h3>
+          <h3 style={{ color: '#002fff', margin: '20px 0 15px 0' }}>- Scoring:</h3>
           <ul style={{ lineHeight: '1.8', color: '#666' }}>
             <li>Base: 400 points per show</li>
             <li>Bonus: 15 points per letter</li>
@@ -839,7 +839,7 @@ const TVShowsHangman = () => {
         <div key={index} style={{
           width: '45px',
           height: '60px',
-          border: isRevealed ? (isPreFilled ? '3px solid #7fba00' : '3px solid #667eea') : '3px solid #667eea',
+          border: isRevealed ? (isPreFilled ? '3px solid #930000' : '3px solid #002fff') : '3px solid #002fff',
           borderRadius: '8px',
           display: 'flex',
           alignItems: 'center',
@@ -848,10 +848,10 @@ const TVShowsHangman = () => {
           fontWeight: 'bold',
           background: isRevealed 
             ? (isPreFilled 
-              ? 'linear-gradient(135deg, #7fba00, #a4de02)' 
-              : 'linear-gradient(135deg, #667eea, #764ba2)')
+              ? 'linear-gradient(135deg, #930000, #ff0707)' 
+              : 'linear-gradient(135deg, #002fff, #00b3ff)')
             : 'white',
-          color: isRevealed ? 'white' : '#667eea',
+          color: isRevealed ? 'white' : '#002fff',
           transition: 'all 0.3s'
         }}>
           {isRevealed ? char : ''}
@@ -863,7 +863,7 @@ const TVShowsHangman = () => {
   const styles = {
     container: {
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      background: 'linear-gradient(135deg, #002fff 0%, #ffffff 100%)',
       minHeight: '100vh',
       display: 'flex',
       justifyContent: 'center',
@@ -916,7 +916,7 @@ const TVShowsHangman = () => {
     showSlot: {
       width: '100px',
       height: '100px',
-      border: '3px dashed #667eea',
+      border: '3px dashed #002fff',
       borderRadius: '15px',
       display: 'flex',
       alignItems: 'center',
@@ -927,7 +927,7 @@ const TVShowsHangman = () => {
     },
     showSlotCompleted: {
       borderStyle: 'solid',
-      background: 'linear-gradient(135deg, #7fba00, #a4de02)',
+      background: 'linear-gradient(135deg, #930000, #ff0707)',
       color: 'white'
     },
     gameArea: {
@@ -945,7 +945,7 @@ const TVShowsHangman = () => {
       alignItems: 'center'
     },
     canvas: {
-      border: '3px solid #667eea',
+      border: '3px solid #002fff',
       borderRadius: '10px',
       background: 'white'
     },
@@ -957,7 +957,7 @@ const TVShowsHangman = () => {
     life: {
       width: '30px',
       height: '30px',
-      background: '#7fba00',
+      background: '#930000',
       borderRadius: '50%',
       display: 'flex',
       alignItems: 'center',
@@ -1000,7 +1000,7 @@ const TVShowsHangman = () => {
       fontWeight: 'bold',
       cursor: 'pointer',
       transition: 'all 0.3s',
-      background: 'linear-gradient(135deg, #667eea, #764ba2)',
+      background: 'linear-gradient(135deg, #002fff, #00b3ff)',
       color: 'white',
       boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
     },
@@ -1010,7 +1010,7 @@ const TVShowsHangman = () => {
       cursor: 'not-allowed'
     },
     keyCorrect: {
-      background: 'linear-gradient(135deg, #7fba00, #a4de02)'
+      background: 'linear-gradient(135deg, #930000, #ff0707)'
     },
     keyWrong: {
       background: 'linear-gradient(135deg, #d13438, #ff6b6b)'
@@ -1023,7 +1023,7 @@ const TVShowsHangman = () => {
       fontWeight: 'bold',
       cursor: 'pointer',
       transition: 'all 0.3s',
-      background: '#667eea',
+      background: '#002fff',
       color: 'white'
     },
     modal: {
@@ -1059,11 +1059,11 @@ const TVShowsHangman = () => {
           <div style={styles.logo}>
             <div style={styles.msLogo}>
               <div style={{...styles.msSquare, background: '#f25022'}} />
-              <div style={{...styles.msSquare, background: '#7fba00'}} />
+              <div style={{...styles.msSquare, background: '#930000'}} />
               <div style={{...styles.msSquare, background: '#00a4ef'}} />
               <div style={{...styles.msSquare, background: '#ffb900'}} />
             </div>
-            <h1 style={{ color: '#667eea', fontSize: '2em', margin: 0 }}>📺 TV Shows Challenge</h1>
+            <h1 style={{ color: '#002fff', fontSize: '2em', margin: 0 }}>📺 TV Shows Challenge</h1>
           </div>
           <p style={{ color: '#666', fontSize: '0.95em', marginTop: '5px' }}>
             Microsoft Tech Club - Guess 3 Shows to Win!
@@ -1073,7 +1073,7 @@ const TVShowsHangman = () => {
         {/* Progress Section */}
         <div style={styles.progressSection}>
           <div style={{ textAlign: 'center', marginBottom: '15px' }}>
-            <div style={{ fontSize: '1.2em', fontWeight: 'bold', color: '#667eea', marginBottom: '5px' }}>
+            <div style={{ fontSize: '1.2em', fontWeight: 'bold', color: '#002fff', marginBottom: '5px' }}>
               Your Progress to Victory
             </div>
             <div style={{ color: '#666', fontSize: '0.9em' }}>
@@ -1093,15 +1093,15 @@ const TVShowsHangman = () => {
           <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', gap: '15px' }}>
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontSize: '0.85em', color: '#666', marginBottom: '3px' }}>Shows Completed</div>
-              <div style={{ fontSize: '1.5em', fontWeight: 'bold', color: '#667eea' }}>{showsCompleted}/3</div>
+              <div style={{ fontSize: '1.5em', fontWeight: 'bold', color: '#002fff' }}>{showsCompleted}/3</div>
             </div>
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontSize: '0.85em', color: '#666', marginBottom: '3px' }}>Current Score</div>
-              <div style={{ fontSize: '1.5em', fontWeight: 'bold', color: '#667eea' }}>{score}</div>
+              <div style={{ fontSize: '1.5em', fontWeight: 'bold', color: '#002fff' }}>{score}</div>
             </div>
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontSize: '0.85em', color: '#666', marginBottom: '3px' }}>Best Score</div>
-              <div style={{ fontSize: '1.5em', fontWeight: 'bold', color: '#667eea' }}>{highScore}</div>
+              <div style={{ fontSize: '1.5em', fontWeight: 'bold', color: '#002fff' }}>{highScore}</div>
             </div>
           </div>
         </div>
@@ -1129,7 +1129,7 @@ const TVShowsHangman = () => {
               <div style={styles.wordDisplayArea}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px', flexWrap: 'wrap', gap: '10px' }}>
                   <div style={{
-                    background: 'linear-gradient(135deg, #667eea, #764ba2)',
+                    background: 'linear-gradient(135deg, #002fff, #00b3ff)',
                     color: 'white',
                     padding: '8px 15px',
                     borderRadius: '20px',
@@ -1225,7 +1225,7 @@ const TVShowsHangman = () => {
       {showModal && (
         <div style={styles.modal}>
           <div style={styles.modalContent}>
-            <h2 style={{ color: '#667eea', marginBottom: '20px', fontSize: '2em' }}>
+            <h2 style={{ color: '#002fff', marginBottom: '20px', fontSize: '2em' }}>
               {modalContent.title}
             </h2>
             <div>{modalContent.body}</div>
