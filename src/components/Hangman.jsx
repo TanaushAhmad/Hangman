@@ -116,7 +116,7 @@ const Hangman = () => {
   };
 
   const drawHangman = () => {
-    const canvas = canvasRef.current; if (!canvas) return; const ctx = canvas.getContext('2d'); ctx.clearRect(0, 0, canvas.width, canvas.height); ctx.strokeStyle = '#002fff'; ctx.lineWidth = 3; ctx.lineCap = 'round';
+    const canvas = canvasRef.current; if (!canvas) return; const ctx = canvas.getContext('2d'); ctx.clearRect(0, 0, canvas.width, canvas.height); ctx.strokeStyle = '#000000'; ctx.lineWidth = 3; ctx.lineCap = 'round';
     if (wrongGuesses >= 0) { ctx.beginPath(); ctx.moveTo(20, 330); ctx.lineTo(180, 330); ctx.stroke(); }
     if (wrongGuesses >= 1) { ctx.beginPath(); ctx.moveTo(50, 330); ctx.lineTo(50, 30); ctx.stroke(); }
     if (wrongGuesses >= 2) { ctx.beginPath(); ctx.moveTo(50, 30); ctx.lineTo(200, 30); ctx.stroke(); }
@@ -138,14 +138,14 @@ const Hangman = () => {
       const isRevealed = guessedLetters.includes(char);
       const isPreFilled = preFilledLetters.includes(index);
       return (
-        <div key={index} style={{ width: '45px', height: '60px', border: isRevealed ? (isPreFilled ? '3px solid #930000' : '3px solid #002fff') : '3px solid #002fff', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.8em', fontWeight: 'bold', background: isRevealed ? (isPreFilled ? 'linear-gradient(135deg, #930000, #ff0707)' : 'linear-gradient(135deg, #002fff, #00b3ff)') : 'white', color: isRevealed ? 'white' : '#002fff', transition: 'all 0.3s' }}>
+        <div key={index} style={{ width: '45px', height: '60px', border: isRevealed ? (isPreFilled ? '3px solid #930000' : '3px solid #000000') : '3px solid #000000', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.8em', fontWeight: 'bold', background: isRevealed ? (isPreFilled ? 'linear-gradient(135deg, #930000, #ff0707)' : 'linear-gradient(135deg, #000000, #00b3ff)') : 'white', color: isRevealed ? 'white' : '#000000', transition: 'all 0.3s' }}>
           {isRevealed ? char : ''}
         </div>
       );
     });
   };
 
-  const styles = { container: { fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif", background: 'linear-gradient(135deg, #002fff 0%, #00b3ff 100%)', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }, main: { background: 'white', borderRadius: '20px', boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)', maxWidth: '1100px', width: '100%', padding: '30px' } };
+  const styles = { container: { fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif", background: 'linear-gradient(135deg, #000000 0%, #00b3ff 100%)', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }, main: { background: 'white', borderRadius: '20px', boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)', maxWidth: '1100px', width: '100%', padding: '30px' } };
 
   if (!currentShow && !showModal) return null;
 
@@ -153,7 +153,7 @@ const Hangman = () => {
     <div style={styles.container}>
       <div style={styles.main}>
         <div style={{ textAlign: 'center', marginBottom: '25px' }}>
-          <h1 style={{ color: '#002fff', fontSize: '2em', margin: 0 }}>📺 TV Shows Challenge</h1>
+          <h1 style={{ color: '#000000', fontSize: '2em', margin: 0 }}>📺 TV Shows Challenge</h1>
           <p style={{ color: '#666', fontSize: '0.95em', marginTop: '5px' }}>Guess 3 shows to win!</p>
         </div>
 
@@ -170,7 +170,7 @@ const Hangman = () => {
 
             <div style={{ background: '#f9f9f9', borderRadius: '15px', padding: '20px', display: 'flex', flexDirection: 'column' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
-                <div style={{ background: 'linear-gradient(135deg, #002fff, #00b3ff)', color: 'white', padding: '8px 15px', borderRadius: '20px', fontSize: '0.85em', fontWeight: 'bold' }}>{currentShow.category.toUpperCase()}</div>
+                <div style={{ background: 'linear-gradient(135deg, #000000, #00b3ff)', color: 'white', padding: '8px 15px', borderRadius: '20px', fontSize: '0.85em', fontWeight: 'bold' }}>{currentShow.category.toUpperCase()}</div>
                 <div style={{ background: '#ffb900', color: 'white', padding: '8px 15px', borderRadius: '20px', fontSize: '0.85em', fontWeight: 'bold' }}>SHOW {showsCompleted + 1}/3</div>
               </div>
 
@@ -203,9 +203,9 @@ const Hangman = () => {
         {showModal && (
           <div style={{ display: 'flex', position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0, 0, 0, 0.85)', justifyContent: 'center', alignItems: 'center', zIndex: 1000 }}>
             <div style={{ background: 'white', padding: '40px', borderRadius: '20px', textAlign: 'center', maxWidth: '550px', maxHeight: '90vh', overflowY: 'auto' }}>
-              <h2 style={{ color: '#002fff', marginBottom: '20px', fontSize: '2em' }}>{modalContent.title}</h2>
+              <h2 style={{ color: '#000000', marginBottom: '20px', fontSize: '2em' }}>{modalContent.title}</h2>
               <div>{modalContent.body}</div>
-              <button onClick={modalContent.action} style={{ padding: '12px 25px', border: 'none', borderRadius: '8px', fontSize: '1em', fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.3s', background: '#002fff', color: 'white', marginTop: '20px' }}>{modalContent.title.includes('Welcome') ? 'Start Game' : modalContent.title.includes('VICTORY') ? 'Play Again' : modalContent.title.includes('Out of Lives') ? 'New Game' : 'Continue'}</button>
+              <button onClick={modalContent.action} style={{ padding: '12px 25px', border: 'none', borderRadius: '8px', fontSize: '1em', fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.3s', background: '#000000', color: 'white', marginTop: '20px' }}>{modalContent.title.includes('Welcome') ? 'Start Game' : modalContent.title.includes('VICTORY') ? 'Play Again' : modalContent.title.includes('Out of Lives') ? 'New Game' : 'Continue'}</button>
             </div>
           </div>
         )}

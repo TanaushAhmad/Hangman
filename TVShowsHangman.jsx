@@ -863,7 +863,7 @@ const TVShowsHangman = () => {
   const styles = {
     container: {
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-      background: 'linear-gradient(135deg, #002fff 0%, #ffffff 100%)',
+      background: 'linear-gradient(135deg, #000000 0%, #ffffff 100%)',
       minHeight: '100vh',
       display: 'flex',
       justifyContent: 'center',
